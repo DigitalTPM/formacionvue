@@ -13,24 +13,33 @@ const routes = [
     component: Home
   },
   {
-    path: '/buscaminas',
+    path: '/buscaminas/view',
     name: 'Buscaminas',
     component: Buscaminas
   },
   {
     path: '/buscaminasRaquel',
     name: 'BuscaminasRaquel',
-    component: Buscaminas
+    component: Buscaminas,
+    props: {
+      tipoMina: 1
+    }
   },
   {
     path: '/buscaminasjoaquin',
     name: 'Buscaminasjoaquin',
-    component: Buscaminas
+    component: Buscaminas,
+    props: {
+      tipoMina: 2
+    }
   },
   {
     path: '/BuscaminasJose',
     name: 'BuscaminasJose',
-    component: Buscaminas
+    component: Buscaminas,
+    props: {
+      tipoMina: 3
+    }
   },
   {
     path: '/gameover/',

@@ -1,7 +1,7 @@
 <template>
   <div class="tablero">
     <div class="controles">
-      <input v-model="celdasAbiertas" />
+      <input v-model="celdasAbiertas" />{{ tipoMina }}
     </div>
     <div class="contenedor-celdas">
       <Celda
@@ -15,6 +15,16 @@
         :mina="celda.mina"
         :habilitado="!finJuego"
       >
+        <template v-if="tipoMina == 1"
+          ><img
+            src="https://play-lh.googleusercontent.com/VCPSGPMM79sp6JmfExcsWB-Un80CKS-7bJo71QiH2EOsrsvjgcJLYpBDxPKfGInDHw=s128"
+        /></template>
+        <template v-if="tipoMina == 2"
+          ><img
+            src="https://www.reviversoft.com/blog/wp-content/uploads/2013/03/Minesweeper_Icon.png"
+          /><span>BOOM</span></template
+        >
+        <template v-if="tipoMina == 3">Jose</template>
       </Celda>
     </div>
   </div>
@@ -40,6 +50,9 @@ export default {
     tamano: {
       type: Number,
       default: 10,
+    },
+    tipoMina: {
+      type: Number,
     },
   },
   methods: {

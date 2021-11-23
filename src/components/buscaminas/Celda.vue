@@ -1,10 +1,11 @@
 <template>
   <div class="celda" :style="estilos" @click="mostrarCelda">
     <div v-if="celdaVisible">
-      <img
-        v-if="mina"
-        src="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/d0/87/f6/d087f6eb-c54e-5af2-fc92-3c4b656af7e0/source/256x256bb.jpg"
-      />
+      <slot v-if="mina">
+        <img
+          src="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/d0/87/f6/d087f6eb-c54e-5af2-fc92-3c4b656af7e0/source/256x256bb.jpg"
+        />
+      </slot>
       <span v-if="!mina" class="numero" :class="colorTexto">
         {{ numeroMinas }}
       </span>
@@ -127,6 +128,13 @@ export default {
   line-height: 50px;
   font-weight: bold;
   font-size: 20px;
+}
+.celda .texto-explosion {
+  font-weight: bold;
+  color: red;
+  position: relative;
+  top: -37px;
+  font-size: 15px;
 }
 .uno {
   color: blue;
