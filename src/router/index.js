@@ -27,6 +27,7 @@ const routes = [
     name: 'Buscaminasjoaquin',
     component: Buscaminas
   },
+  {
     path: '/BuscaminasJose',
     name: 'BuscaminasJose',
     component: Buscaminas
