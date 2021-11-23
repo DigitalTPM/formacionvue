@@ -18,6 +18,11 @@ const routes = [
     component: Buscaminas
   },
   {
+    path: '/buscaminasRaquel',
+    name: 'BuscaminasRaquel',
+    component: Buscaminas
+  },
+  {
     path: '/gameover/',
     name: 'GameOver',
     component: GameOver
