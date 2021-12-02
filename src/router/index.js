@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import PeticionServidor from '../views/PeticionServidor'
 import Buscaminas from '../views/Buscaminas.vue'
 import GameOver from '../views/GameOver.vue'
 
@@ -11,6 +12,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/peticionServidor',
+    name: 'PeticionServidor',
+    component: PeticionServidor
   },
   {
     path: '/buscaminas/view',
