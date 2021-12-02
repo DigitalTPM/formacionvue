@@ -2,7 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link :to="{ name: 'Buscaminas' }">Buscaminas</router-link> |
+      <router-link :to="{ name: 'PeticionServidor' }"
+        >Peticion Servidor</router-link
+      >
+      | <router-link :to="{ name: 'Buscaminas' }">Buscaminas</router-link> |
       <router-link :to="{ name: 'BuscaminasRaquel' }"
         >BuscaminasRaquel</router-link
       >
